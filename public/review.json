@@ -1,0 +1,66 @@
+[
+     {
+          
+          
+          "name": "Simon",
+          "logo": "https://i1.rgstatic.net/ii/profile.image/554786303823872-1509282770827_Q512/Simon-Roy-3.jpg",
+          "description":"Great service, efficient communication and a really easy way to get a mortgage with lots of help and support to get the right deal.",
+          "rating": "4.2"
+     },
+     {
+          
+          
+          "name": "Nelson",
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIXROj6UdzMtdz5l7nibcrKHCkX6XKdZluTE8NrJSjj3Z_dR9nL5cRNNQzcUaz2HmrJYQ&usqp=CAU",
+          "description": "",
+          "rating": "4.4"
+     },
+     {
+          
+          
+          "name": "Smith",
+          "logo": "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2022/02/How_To_Start_A_Cleaning_Business_-_article_image.jpg",
+          "description": "Taking a professional house cleaning services for cleaning your sweet home makes your life so easier. It also saves your valuable time. You will presently don’t need to stress over making time to finish tasks during your hectic day. When you delegate the cleaning liabilities to a cleaning service provider like us, there is no compelling reason to invest energy washing, dusting, or vacuuming.This service will assist you with cleaning your home and furthermore help eliminating profound stains. Our Service professionals will utilize viable synthetic compounds that will wash your home easily and perfectly." ,
+          "rating": "4.9"
+     },
+     {
+          
+          
+          "name": "Electricity",
+          "logo": "https://africa-energy-portal.org/sites/default/files/2019-05/electricity%20connection%20in%20africa.jpg",
+          "description": "With 15+ years of experience in professional and quality electrical services, Hall Electrical is ready to shine in the electrical industry with its modern and elegant electrician website design. Its homepage is a great display of images and essential elements. It embraces a sleek slider on the hero scene displaying some of the quality works and great headlines. Since it is important that your website must represent your brand, Hall Electrical showcases its portfolio and services in a simple but comprehensive manne" ,
+          "rating": "4.4"
+     },
+     {
+          
+          
+          "name": "Roofing",
+          "logo": "https://legacyusa.com/wp-content/uploads/2020/03/Metal-Roofing-Materials.jpg",
+          "description": "Our team understands how disruptive a leaky or worn-out roof can be for you and your family. We also know the potential dangers of damage to the interior of your home when this occurs. This is why we take our commitment to craftsmanship so seriously and will go above and beyond the call of duty to give you lasting results and complete satisfaction",
+          "rating": "4.5"
+     },
+     {
+          
+          
+          "name": "Renovation",
+          "logo": "https://angel-prod-public-content.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/sites/2/2019/03/Keep-close-tabs-on-renovation-progress1.jpg",
+          "description": "Our home renovation service provides you with a great opportunity to make your house energy-efficient and save on electricity bills. It helps to change the light bulbs and upgrade your kitchen and bathroom appliances. You could also insulate the walls in the basement to help with temperature control. These small changes can cut down on your energy bills, allowing you to save money in the long run." ,
+          "rating": "4.7"
+     },
+     {
+          
+          
+          "name": "Tile Installation",
+          "logo": "https://aradbranding.com/en/wp-content/uploads/2022/08/1.1_11zon-7.jpg",
+          "description": "Professional tile installation is required for fireplace tiles, pool tiles, bathroom tiles, shower tiles, and kitchen tiles. There are various firms you may turn to, but if you want the greatest tile contractors working for you, make sure you rely on Honey Do Men to get the job done. We provide a wide range of services, such as kitchen wall tiles, mosaic tile refurbishing, marble flooring installation, and even porcelain tile repair. Our staff can handle any commercial tile installation services or residential tile installation services. Make sure to give us a call if you need tile repair or renovation tiling services." ,
+          "rating": "4.7"
+     },
+     {
+          
+          
+          "name": "Carpentry",
+          "logo": "https://images.squarespace-cdn.com/content/v1/588034b48419c2ec7abdbf34/1554418962767-P8GECFPM6PVG5AO4PGIM/shutterstock_303640922.jpg?format=1000w",
+          "description": "We all know a fresh coat of paint can do wonders for updating a space. Still, nothing adds elegance and warmth like custom woodwork and trim. Imagine transforming your living room or den with crown molding, custom storage, and a fireplace makeover. Now move to the kitchen and imagine how much better it would look with new, custom-built countertops and cabinets. Carpentry services from your local Mr. Handyman can make that a reality with custom carpentry." ,
+          "rating": "4.7"
+     }
+]

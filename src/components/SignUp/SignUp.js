@@ -52,7 +52,7 @@ const SignUp = () => {
                     <div className="hero-content flex-col mb-16 mt-16 lg:flex-row-reverse">
                          <div className="text-center lg:text-left">
 
-                              <img src="https://nilgiricollege.ac.in/app/app-files/images/userlog.png" className='w-full lg:w-full' alt="" />
+                         <img src="https://nilgiricollege.ac.in/app/app-files/images/userlog.png" className='w-full lg:w-full' alt="" />
                          </div>
                          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl shadow-gray-700 bg-base-100">
                               <h1 className="text-3xl mt-3 text-center font-bold">Register Now!</h1>
@@ -73,7 +73,7 @@ const SignUp = () => {
                                         </div>
                                         <div className="form-control">
                                              <label className="label">
-                                                  <span className="label-text">Password</span>
+                                             <span className="label-text">Password</span>
                                              </label>
                                              <input type="password" placeholder="password" name='password' className="input input-bordered" required />
                                              <label className="label">

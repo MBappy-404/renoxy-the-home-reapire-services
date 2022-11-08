@@ -22,7 +22,7 @@ const AllServices = () => {
                          }
                     </div>
                </div>
-          // </div>
+           </div>
      );
 };
 

@@ -9,6 +9,7 @@ import AllServices from './components/AllServices/AllServices';
 import ServiceDetails from './components/AllServices/ServiceDetails';
 import SignUp from './components/SignUp/SignUp';
 import Login from './components/Login/Login';
+import AddService from './components/AddService/AddService';
 function App() {
 
   const router = createBrowserRouter([
@@ -54,6 +55,10 @@ function App() {
         {
           path: '/login',
           element: <Login></Login>
+        },
+        {
+          path: '/addService',
+          element: <AddService></AddService>
         }
       ],
     }

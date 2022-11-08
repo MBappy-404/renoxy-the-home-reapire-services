@@ -11,7 +11,7 @@ const ShowAllService = ({ service }) => {
       <figure className="px-10 pt-10">
         <PhotoProvider>
           <PhotoView src={logo}>
-            <img src={logo} alt="" />
+            <img src={logo} className='rounded-lg' alt="" />
           </PhotoView>
         </PhotoProvider>
       </figure>

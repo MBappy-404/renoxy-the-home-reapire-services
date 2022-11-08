@@ -89,7 +89,6 @@ const SignUp = () => {
                                              <button onClick={handleGoogleSignIn} className="btn w-56 btn-outline">
                                                   <img src="https://freesvg.org/img/1534129544.png" className='w-6 mr-3' alt="" />
                                                     Google</button>
-                                             
                                         </div>
                                    </form>
 

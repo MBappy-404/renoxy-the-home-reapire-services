@@ -11,12 +11,14 @@ import SignUp from './components/SignUp/SignUp';
 import Login from './components/Login/Login';
 import AddService from './components/AddService/AddService';
 import MyReviews from './components/MyReviews/MyReviews';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 function App() {
 
   const router = createBrowserRouter([
     {
       path: '/',
       element: <Main></Main>,
+      errorElement:<ErrorPage></ErrorPage>,
       children: [
 
         {

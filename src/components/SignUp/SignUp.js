@@ -52,6 +52,13 @@ const SignUp = () => {
           .then(result=>{
                const user = result.user;
                console.log(user);
+               MySwal.fire({
+                    title: 'Registration Success',
+                    text: '',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+               });
+               navigate('/home')
           })
           .catch(err => {
                console.log(err);
@@ -68,8 +75,8 @@ const SignUp = () => {
 
      }
      return (
-          <div>
-               <div className="hero min-h-screen bg-base-200">
+          <div className='bg-slate-400'>
+               <div className="hero min-h-screen">
                     <div className="hero-content flex-col mb-16 mt-16 lg:flex-row-reverse">
                          <div className="text-center lg:text-left">
 

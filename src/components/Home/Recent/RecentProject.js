@@ -1,11 +1,12 @@
 import React from 'react';
+import '../Home.css'
 
 const RecentProject = () => {
      return (
           <div>
                <div className='text-center'>
                     <h1 className='text-4xl  font-bold'>RECENT PROJECTS</h1>
-                    <p className=' text-slate-500 text-lg mt-5 '>Here are a few of many projects we have completed for our customers. We provide a professional service <br />
+                    <p className=' text-slate-700 text-lg mt-5 '>Here are a few of many projects we have completed for our customers. We provide a professional service <br />
                          which includes consultation, free estimate, design, supply of materials and installation.</p>
                </div>
 
@@ -16,7 +17,7 @@ const RecentProject = () => {
                          <div className="flex flex-wrap -m-1 md:-m-2">
                               <div className="flex flex-wrap w-1/2">
                                    <div className="w-1/2 p-1 md:p-2">
-                                        <img alt="gallery" className="block object-cover object-center w-full h-full rounded-lg"
+                                        <img alt="gallery" className="block object-cover  object-center w-full h-full rounded-lg"
                                              src="https://media.istockphoto.com/photos/technician-repairing-an-hotwater-heater-picture-id178425815?b=1&k=20&m=178425815&s=170667a&w=0&h=AI3Vj1o3n4ZXG0MltjwYWEK0YkNR_NyEtcbGeqF1L_o=" />
                                    </div>
                                    <div className="w-1/2 p-1 md:p-2">

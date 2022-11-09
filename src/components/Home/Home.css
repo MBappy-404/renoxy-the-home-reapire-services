@@ -1,6 +1,17 @@
 .overview{
-  background: linear-gradient(to right,  #0f0f0f 0%,rgba(5, 5, 5, 0) 100%), url('https://brigate.vercel.app/img/customerNum.jpg');  
+  background: linear-gradient(to right,  #0f0f0fc1 0%,rgba(5, 5, 5, 0.461) 100%), url('https://brigate.vercel.app/img/customerNum.jpg');  
   background-repeat: no-repeat;
-  /* background-position: center; */
+
 }
 
+/* service details image  */
+.details-img{
+  width: 65%;
+}
+
+@media screen and (max-width: 500px) {
+  
+  .details-img{
+    width: 100%;
+  }
+}

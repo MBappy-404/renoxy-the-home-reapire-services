@@ -66,7 +66,7 @@ const Home = () => {
 
                <section>
                     <h1 className='text-center m-10 font-bold text-5xl'>Our Services</h1>
-                    <div className='service container  md:m-10  grid grid-cols-1  md:grid-cols-3'>
+                    <div className='service container m-auto mb-5  grid grid-cols-1 gap-0 md:gap-x-10  md:grid-cols-2 lg:grid-cols-3'>
 
                          {
                               services.map(service => <Services

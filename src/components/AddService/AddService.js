@@ -1,6 +1,9 @@
 import React from 'react';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 const AddService = () => {
+     const MySwal = withReactContent(Swal);
 
      const handleSubmit = (event) => {
           event.preventDefault();
@@ -28,6 +31,12 @@ const AddService = () => {
                     console.log(data)
                     if (data.acknowledged) {
                          form.reset();
+                         MySwal.fire({
+                              title: 'Your Service Added',
+                              text: '',
+                              icon: 'success',
+                              confirmButtonText: 'Ok'
+                         });
                     }
                })
                .catch(err => console.log(err))

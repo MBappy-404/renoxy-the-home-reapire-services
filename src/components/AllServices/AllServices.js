@@ -13,7 +13,7 @@ const AllServices = () => {
                </div>
                <div>
                   
-                    <div className='container gap-10  mt-10 mb-10 grid grid-cols-1 md:grid-cols-3 '>
+                    <div className='container   m-auto gap-10 md:gap-14 mt-10 mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
                          {
                               services.map(service => <ShowAllService
                                    key={service._id}

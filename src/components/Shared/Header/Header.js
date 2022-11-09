@@ -15,13 +15,13 @@ const Header = () => {
      }
      return (
           <div>
-               <div className="navbar bg-slate-300">
+               <div className="navbar bg-yellow-500 ">
                     <div className="navbar-start">
-                         <img src={logo} className='w-40' alt="" />
+                         <img src={logo} className='w-40 ml-0 md:ml-8' alt="" />
                     </div>
                     <div className="navbar-center">
                          {/* desktop view menu */}
-                         <div className="hidden lg:flex">
+                         <div className="hidden font-semibold text-lg  lg:flex">
                               <ul className="menu menu-horizontal p-0">
                                    <li><a> <Link to='/home' >Home</Link> </a></li>
                                    <li><a><Link to='/blog'>Blog</Link> </a></li>
@@ -39,7 +39,7 @@ const Header = () => {
                          </div>
 
                          {/* mobile view menu */}
-                         <div className="dropdown lg:hidden md:hidden sm:block">
+                         <div className="dropdown lg:hidden sm:block">
                               <label tabIndex={0} className="btn btn-ghost btn-circle">
                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                               </label>
@@ -53,6 +53,21 @@ const Header = () => {
                          </div>
                     </div>
                     <div className="navbar-end mr-8">
+
+                         {/* conditional sign logout  */}
+                         <div>
+                              {
+                                   user?.email ?
+                                        <Link onClick={handleLogOut} to='/login'> <button className='btn-sm hidden md:block mr-5 btn '>Log out</button> </Link>
+
+                                        :
+
+                                        <Link to='/signup'><button className='btn hidden md:block btn-sm mr-5 btn-primary'>Register</button></Link>
+                              }
+                         </div>
+
+                         {/* user dropdown end  */}
+
                          <div className="dropdown dropdown-end">
                               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                    <div className="w-16 rounded-full">
@@ -85,20 +100,17 @@ const Header = () => {
                                                   ''
                                         }
                                    </li>
-
                                    {
                                         user?.email ?
                                              <li><Link onClick={handleLogOut} to='/login'> Logout</Link></li>
-
                                              :
-
                                              <li><Link to='/login'>Log In</Link></li>
                                    }
                               </ul>
                          </div>
                     </div>
                </div>
-          </div>
+          </div >
      );
 };
 

@@ -6,7 +6,7 @@ const Services = ({service}) => {
      const {description, logo, rating,name} = service;
      
      return ( 
-          <div className="card w-72 md:w-96 bg-base-100 mb-5 hover:shadow-2xl  transition  shadow-2xl hover:shadow-slate-600">
+          <div className="card w-72 m-auto md:w-96 bg-base-100 mb-5 hover:shadow-2xl  transition  shadow-2xl hover:shadow-slate-600">
           <figure className="px-10 pt-10">
             <img src={logo} alt="Shoes" className="rounded-xl w-full" />
           </figure>

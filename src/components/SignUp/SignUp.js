@@ -1,14 +1,18 @@
 import React, { useContext } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Auth/AuthProvider';
 import { GoogleAuthProvider } from "firebase/auth";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 const SignUp = () => {
 
      const {createUser,googleLogin,userProfile} = useContext(AuthContext);
      const [error, setError] = useState();
      const googleProvider = new GoogleAuthProvider()
+     const navigate = useNavigate()
+     const MySwal = withReactContent(Swal);
      const handleSubmit = (event) =>{
           event.preventDefault();
 
@@ -24,6 +28,13 @@ const SignUp = () => {
                console.log(user);
                handleUserProfile(name);
                form.reset()
+               MySwal.fire({
+                    title: 'Registration Success',
+                    text: '',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+               });
+               navigate('/home')
                
           })
           .catch(err =>{

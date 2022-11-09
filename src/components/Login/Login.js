@@ -1,13 +1,17 @@
 import React from 'react';
 import { useContext } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Auth/AuthProvider';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 const Login = () => {
 
      const [error, setError] = useState(); 
      const {signIn} = useContext(AuthContext);
+     const MySwal = withReactContent(Swal);
+     const navigate = useNavigate();
 
      const handleLogIn = (event) =>{
           event.preventDefault();
@@ -21,6 +25,14 @@ const Login = () => {
                const user = result.user;
                console.log(user);
                form.reset();
+               MySwal.fire({
+                    title: 'Login Success',
+                    text: '',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+               });
+               navigate('/home')
+
           })
           .catch(err => {
                console.log(err);

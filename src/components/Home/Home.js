@@ -6,6 +6,7 @@ import slider3 from '../../Assets/Images/slider3 Cover.png'
 import './Home.css'
 import Services from './Services/Services';
 import OverView from './OverView/OverView';
+import RecentProject from './Recent/RecentProject';
 
 const Home = () => {
      const services = useLoaderData();
@@ -13,7 +14,9 @@ const Home = () => {
      return (
 
           <div>
-               <div slide className="carousel w-full container m-auto">
+               {/* Slider  */}
+
+               < section slide className="carousel w-full container m-auto">
 
                     {/* slider1  */}
 
@@ -56,14 +59,14 @@ const Home = () => {
                          </div>
                     </div>
 
-               </div>
+               </section>
 
 
                {/* services  */}
 
-               <div className=''>
+               <section>
                     <h1 className='text-center m-10 font-bold text-5xl'>Our Services</h1>
-                    <div className='service container m-10  md:m-14  grid grid-cols-1  md:grid-cols-3'>
+                    <div className='service container  md:m-10  grid grid-cols-1  md:grid-cols-3'>
 
                          {
                               services.map(service => <Services
@@ -71,20 +74,21 @@ const Home = () => {
                                    service={service}
                               ></Services>)
                          }
-
                     </div>
                     <div className='text-center mb-5'>
                          <button className="btn btn-primary w-56 "> <Link to='/AllServices'>Show All Services</Link> </button>
                     </div>
-               </div>
+               </section>
 
+               {/* Over View  */}
+               <section>
+                    <OverView></OverView>
+               </section>
 
-          <div>
-               <OverView></OverView>
-          </div>
-
-
-
+                 {/* Recent Project   */}
+               <section className='mb-16 mt-16'>
+                    <RecentProject></RecentProject>
+               </section>
 
           </div >
 

@@ -1,11 +1,12 @@
 import React from 'react';
 
+
 const Services = ({service}) => {
      // console.log(service);
      const {description, logo, rating,name} = service;
      
      return ( 
-          <div className="card w-72 md:w-96 bg-base-100 mb-5 hover:mb-5  shadow-2xl shadow-slate-800">
+          <div className="card w-72 md:w-96 bg-base-100 mb-5 hover:shadow-2xl  transition  shadow-2xl hover:shadow-slate-600">
           <figure className="px-10 pt-10">
             <img src={logo} alt="Shoes" className="rounded-xl w-full" />
           </figure>

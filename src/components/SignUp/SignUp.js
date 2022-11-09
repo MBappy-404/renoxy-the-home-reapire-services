@@ -6,22 +6,25 @@ import { GoogleAuthProvider } from "firebase/auth";
 
 const SignUp = () => {
 
-     const {createUser,googleLogin} = useContext(AuthContext);
+     const {createUser,googleLogin,userProfile} = useContext(AuthContext);
      const [error, setError] = useState();
      const googleProvider = new GoogleAuthProvider()
      const handleSubmit = (event) =>{
           event.preventDefault();
 
           const form = event.target;
-          const name = form.name.value;
+          const name = form.username.value;
           const email = form.email.value;
           const password = form.password.value;
+          // console.log(name,email,password);
 
           createUser(email, password)
           .then(result=> {
                const user = result.user;
                console.log(user);
+               handleUserProfile(name);
                form.reset()
+               
           })
           .catch(err =>{
                console.log(err)
@@ -44,6 +47,13 @@ const SignUp = () => {
                setError(err.message)
           })
 
+
+     }
+     const handleUserProfile = (name) => {
+          const profile = { displayName: name }
+          userProfile(profile)
+               .then(() => { })
+               .catch(error => console.error(error))
 
      }
      return (

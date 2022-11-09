@@ -5,10 +5,11 @@ import slider2 from '../../Assets/Images/slider.png'
 import slider3 from '../../Assets/Images/slider3 Cover.png'
 import './Home.css'
 import Services from './Services/Services';
+import OverView from './OverView/OverView';
 
 const Home = () => {
      const services = useLoaderData();
-     console.log(services);
+     // console.log(services);
      return (
 
           <div>
@@ -21,7 +22,7 @@ const Home = () => {
                               <img src={slider1} alt="" className="w-full" />
                          </div>
 
-                       
+
                          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                               <a href="#slide3" className="btn btn-circle">❮</a>
                               <a href="#slide2" className="btn btn-circle">❯</a>
@@ -35,7 +36,7 @@ const Home = () => {
                          <div className='carousel-img'>
                               <img src={slider2} alt="" className="w-full" />
                          </div>
-                    
+
                          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                               <a href="#slide1" className="btn btn-circle">❮</a>
                               <a href="#slide3" className="btn btn-circle">❯</a>
@@ -72,13 +73,20 @@ const Home = () => {
                          }
 
                     </div>
+                    <div className='text-center mb-5'>
+                         <button className="btn btn-primary w-56 "> <Link to='/AllServices'>Show All Services</Link> </button>
+                    </div>
                </div>
-               
-             <div className='text-center mb-5'>
-             <button className="btn btn-primary w-56 "> <Link to='/AllServices'>Show All Services</Link> </button>
-             </div>
 
+
+          <div>
+               <OverView></OverView>
           </div>
+
+
+
+
+          </div >
 
      );
 };

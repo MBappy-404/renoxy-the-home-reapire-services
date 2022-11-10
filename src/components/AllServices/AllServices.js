@@ -7,7 +7,7 @@ import useTitle from '../../Hooks/useTitle';
 const AllServices = () => {
      const services = useLoaderData()
      useTitle('All service')
-     console.log(services);
+     // console.log(services);
      return (
           <div>
                <div>

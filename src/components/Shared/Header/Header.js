@@ -46,8 +46,15 @@ const Header = () => {
                               <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                                    <li><a> <Link to='/home' >Home</Link> </a></li>
                                    <li><a><Link to='/blog'>Blog</Link> </a></li>
-                                   <li><a><Link to='/addService'>Add service</Link> </a></li>
+                                  {
+                                   user?.uid ?
+                                   <>
+                                    <li><a><Link to='/addService'>Add service</Link> </a></li>
                                    <li><a><Link to='/myReviews'>My reviews</Link> </a></li>
+                                   </>
+                                   :
+                                   " "
+                                  }
 
                               </ul>
                          </div>

@@ -8,14 +8,14 @@ import withReactContent from 'sweetalert2-react-content'
 import useTitle from '../../Hooks/useTitle';
 
 const SignUp = () => {
-      
+
      useTitle('Sign up')
-     const {createUser,googleLogin,userProfile} = useContext(AuthContext);
+     const { createUser, googleLogin, userProfile } = useContext(AuthContext);
      const [error, setError] = useState();
      const googleProvider = new GoogleAuthProvider()
      const navigate = useNavigate()
      const MySwal = withReactContent(Swal);
-     const handleSubmit = (event) =>{
+     const handleSubmit = (event) => {
           event.preventDefault();
 
           const form = event.target;
@@ -25,92 +25,48 @@ const SignUp = () => {
           // console.log(name,email,password);
 
           createUser(email, password)
-          .then(result=> {
-               const user = result.user;
-               console.log(user);
-               handleUserProfile(name);
-               form.reset()
-               MySwal.fire({
-                    title: 'Registration Success',
-                    text: '',
-                    icon: 'success',
-                    confirmButtonText: 'Ok'
-               });
-               
-               const currentUser = {
-                    email: user.email
-               }
-               // console.log(currentUser);
-
-               //get jwt token
-               fetch('http://localhost:5000/jwt', {
-                    method: 'POST',
-                    headers:{
-                         'content-type' : 'application/json'
-
-                    },
-                    body: JSON.stringify(currentUser)
-               })
-               .then(res => res.json())
-               .then(data =>{
-                    console.log(data);
-                    localStorage.setItem('token', data.token);
+               .then(result => {
+                    const user = result.user;
+                    console.log(user);
+                    handleUserProfile(name);
+                    form.reset()
+                    MySwal.fire({
+                         title: 'Registration Success',
+                         text: '',
+                         icon: 'success',
+                         confirmButtonText: 'Ok'
+                    });
                     navigate('/home')
+
+               })
+               .catch(err => {
+                    console.log(err)
+                    setError(err.message)
                })
 
-            
 
-               
-          })
-          .catch(err =>{
-               console.log(err)
-               setError(err.message)
-          })
-          
 
-          
      }
 
-     const handleGoogleSignIn = () =>{
+     const handleGoogleSignIn = () => {
 
           googleLogin(googleProvider)
-          .then(result=>{
-               const user = result.user;
-               console.log(user);
-               MySwal.fire({
-                    title: 'Registration Success',
-                    text: '',
-                    icon: 'success',
-                    confirmButtonText: 'Ok'
-               });
-              
-               const currentUser = {
-                    email: user.email
-               }
-               // console.log(currentUser);
-
-               //get jwt token
-               fetch('http://localhost:5000/jwt', {
-                    method: 'POST',
-                    headers:{
-                         'content-type' : 'application/json'
-
-                    },
-                    body: JSON.stringify(currentUser)
-               })
-               .then(res => res.json())
-               .then(data =>{
-                    console.log(data);
-                    localStorage.setItem('token', data.token);
+               .then(result => {
+                    const user = result.user;
+                    console.log(user);
+                    MySwal.fire({
+                         title: 'Registration Success',
+                         text: '',
+                         icon: 'success',
+                         confirmButtonText: 'Ok'
+                    });
                     navigate('/home')
-               })
 
-            
-          })
-          .catch(err => {
-               console.log(err);
-               setError(err.message)
-          })
+               })
+               .catch(err => {
+                    console.log(err);
+                    setError(err.message)
+               })
 
 
      }
@@ -127,7 +83,7 @@ const SignUp = () => {
                     <div className="hero-content flex-col mb-16 mt-16 lg:flex-row-reverse">
                          <div className="text-center lg:text-left">
 
-                         <img src="https://nilgiricollege.ac.in/app/app-files/images/userlog.png" className='w-full lg:w-full' alt="" />
+                              <img src="https://nilgiricollege.ac.in/app/app-files/images/userlog.png" className='w-full lg:w-full' alt="" />
                          </div>
                          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl shadow-gray-700 bg-base-100">
                               <h1 className="text-3xl mt-3 text-center font-bold">Register Now!</h1>
@@ -148,7 +104,7 @@ const SignUp = () => {
                                         </div>
                                         <div className="form-control">
                                              <label className="label">
-                                             <span className="label-text">Password</span>
+                                                  <span className="label-text">Password</span>
                                              </label>
                                              <input type="password" placeholder="password" name='password' className="input input-bordered" required />
                                              <label className="label">
@@ -163,7 +119,7 @@ const SignUp = () => {
                                         <div className=" flex justify-center mt-4">
                                              <button onClick={handleGoogleSignIn} className="btn w-56 btn-outline">
                                                   <img src="https://freesvg.org/img/1534129544.png" className='w-6 mr-3' alt="" />
-                                                    Google</button>
+                                                  Google</button>
                                         </div>
                                    </form>
 

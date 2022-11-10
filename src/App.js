@@ -25,12 +25,12 @@ function App() {
         {
           path: '/',
           element: <Home></Home>,
-          loader: () => fetch('http://localhost:5000/services'),
+          loader: () => fetch('https://home-service-server-rosy.vercel.app/services'),
         },
         {
           path: '/home',
           element:  <Home></Home>,
-          loader: () => fetch('http://localhost:5000/services'),
+          loader: () => fetch('https://home-service-server-rosy.vercel.app/services'),
         },
         {
           path: '/blog',
@@ -44,13 +44,13 @@ function App() {
         {
           path:'/AllServices',
           element: <AllServices></AllServices>,
-          loader: () => fetch('http://localhost:5000/allService')
+          loader: () => fetch('https://home-service-server-rosy.vercel.app/allService')
 
         },
         {
           path:'/serviceDetails/:id',
           element:<ServiceDetails></ServiceDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/allService/${params.id}`)
+          loader: ({params}) => fetch(`https://home-service-server-rosy.vercel.app/allService/${params.id}`)
         },
         {
           path:'/signup',

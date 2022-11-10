@@ -19,10 +19,12 @@ const ServiceDetails = () => {
 
      const [reviews, setReview] = useState([]);
      useEffect(() => {
-          fetch(`http://localhost:5000/reviews/service?serviceID=${_id}`)
+          fetch(`https://home-service-server-rosy.vercel.app/reviews/service?serviceID=${_id}`)
                .then(res => res.json())
                .then(data => setReview(data))
-     }, [reviews])
+     }, [reviews]);
+
+     // review user
      const handleSubmit = (event) => {
           event.preventDefault();
           const form = event.target;
@@ -42,7 +44,7 @@ const ServiceDetails = () => {
           }
 
           //  user review post  mongo db 
-          fetch('http://localhost:5000/reviews', {
+          fetch('https://home-service-server-rosy.vercel.app/reviews', {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'

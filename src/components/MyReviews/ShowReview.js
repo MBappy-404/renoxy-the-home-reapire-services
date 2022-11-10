@@ -18,7 +18,7 @@ const ShowReview = ({ review, handleDelete }) => {
                return alert('please fill input')
           }
 
-          fetch(`http://localhost:5000/reviews/${_id}`, {
+          fetch(`https://home-service-server-rosy.vercel.app/reviews/${_id}`, {
                method: "PUT",
                headers: {
                     'content-type': 'application/json'

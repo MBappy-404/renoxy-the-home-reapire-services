@@ -11,24 +11,24 @@ const Footer = () => {
                     </div>
                     <div className='m-auto'>
                          <span className="footer-title">Services</span>
-                         <a className="link link-hover">Electricity</a>
-                         <a className="link link-hover">Roofing</a>
-                         <a className="link link-hover">Plumbing</a>
-                         <a className="link link-hover">Painting</a>
+                         <a href=' ' className="link link-hover">Roofing</a>
+                         <a href=' ' className="link link-hover">Plumbing</a>
+                         <a href=' ' className="link link-hover">Electricity</a>
+                         <a href=' ' className="link link-hover">Painting</a>
                     </div>
                     <div className='m-auto'>
                          <span className="footer-title">Company</span>
-                         <a className="link link-hover">About us</a>
-                         <a className="link link-hover">Contact</a>
-                         <a className="link link-hover">Jobs</a>
-                         <a className="link link-hover">Press kit</a>
+                         <a href=' ' className="link link-hover">About us</a>
+                         <a href=' ' className="link link-hover">Contact</a>
+                         <a href=' ' className="link link-hover">Jobs</a>
+                         <a href=' ' className="link link-hover">Press kit</a>
                     </div>
                     <div className='m-auto'>
                          <span className="footer-title">Legal</span>
-                         <a className="link link-hover">Terms of use</a>
-                         <a className="link link-hover">Privacy policy</a>
-                         <a className="link link-hover">Cookie policy</a>
-                         <a className="link link-hover">Terms of service</a>
+                         <a href=' ' className="link link-hover">Terms of use</a>
+                         <a href=' ' className="link link-hover">Privacy policy</a>
+                         <a href=' ' className="link link-hover">Cookie policy</a>
+                         <a href=' ' className="link link-hover">Terms of service</a>
                     </div>
                </footer>
           </div>

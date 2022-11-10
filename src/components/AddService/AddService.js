@@ -19,7 +19,7 @@ const AddService = () => {
           const service = { name, price, description, logo, rating }
           console.log(service);
 
-          fetch('http://localhost:5000/allService', {
+          fetch('https://home-service-server-rosy.vercel.app/allService', {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'

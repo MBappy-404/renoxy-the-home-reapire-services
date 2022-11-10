@@ -7,8 +7,10 @@ import './Home.css'
 import Services from './Services/Services';
 import OverView from './OverView/OverView';
 import RecentProject from './Recent/RecentProject';
+import useTitle from '../../Hooks/useTitle';
 
 const Home = () => {
+     useTitle('Home')
      const services = useLoaderData();
      // console.log(services);
      return (

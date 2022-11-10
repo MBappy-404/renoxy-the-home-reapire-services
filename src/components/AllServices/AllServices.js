@@ -2,9 +2,11 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ShowAllService from './ShowAllService';
 import serviceImg from '../../Assets/Images/Black And Yellow Modern We Build Your Dream Home Facebook Cover .gif'
+import useTitle from '../../Hooks/useTitle';
 
 const AllServices = () => {
      const services = useLoaderData()
+     useTitle('All service')
      console.log(services);
      return (
           <div>

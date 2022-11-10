@@ -1,9 +1,11 @@
 import React from 'react';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import useTitle from '../../Hooks/useTitle';
 
 const AddService = () => {
      const MySwal = withReactContent(Swal);
+     useTitle('Add service')
 
      const handleSubmit = (event) => {
           event.preventDefault();

@@ -5,9 +5,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Auth/AuthProvider';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import useTitle from '../../Hooks/useTitle';
 
 const Login = () => {
-
+       
+     useTitle('Login')
      const [error, setError] = useState(); 
      const {signIn} = useContext(AuthContext);
      const MySwal = withReactContent(Swal);

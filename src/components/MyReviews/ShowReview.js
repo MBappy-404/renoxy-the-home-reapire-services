@@ -39,7 +39,7 @@ const ShowReview = ({ review, handleDelete }) => {
                <td>
                     <div className="flex items-center space-x-3">
                          <div>
-                              {message}
+                             <p> {message.slice(0,50)}...</p>
                          </div>
                     </div>
                </td>
@@ -65,7 +65,7 @@ const ShowReview = ({ review, handleDelete }) => {
                                   
                                   {/* update or cancel  */}
                                    <div className="modal-action">
-                                        <input className="btn" type="submit" value='Update' />
+                                        <input htmlFor="my-modal-6" className="btn" type="submit" value='Update' />
                                         <label htmlFor="my-modal-6" className="btn">Not Now!</label>
                                    </div>
                               </form>

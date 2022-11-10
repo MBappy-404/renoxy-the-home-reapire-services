@@ -6,9 +6,14 @@ import { AuthContext } from '../../Auth/AuthProvider';
 import { FaStar } from "react-icons/fa";
 import { useState } from 'react';
 import ReviewCard from '../ReviewCard/ReviewCard';
+import useTitle from '../../Hooks/useTitle';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 
 const ServiceDetails = () => {
+     useTitle('Service details');
+     const MySwal = withReactContent(Swal);
      const { description, price, rating, name, logo, _id } = useLoaderData();
      const { user } = useContext(AuthContext);
 
@@ -34,9 +39,9 @@ const ServiceDetails = () => {
                userPhoto: user.photoURL,
                rating: ratingReview,
                message: reviewDescription,
-
           }
 
+          //  user review post  mongo db 
           fetch('http://localhost:5000/reviews', {
                method: 'POST',
                headers: {
@@ -48,12 +53,19 @@ const ServiceDetails = () => {
                .then(data => {
                     console.log(data);
                     if (data.acknowledged) {
+                         MySwal.fire({
+                              title: 'Review Added',
+                              text: '',
+                              icon: 'success',
+                              timer: 1500,
+                              showConfirmButton: false,
+                         });
                          form.reset();
                     }
                })
-
-
      }
+
+
      return (
           <div className='container m-auto'>
 
@@ -64,7 +76,7 @@ const ServiceDetails = () => {
                     </figure>
                     <div className="card-body">
                          <h2 className="card-title text-3xl font-bold ">{name}</h2>
-                         <p className='text-xl text-slate-700 text-justify'>{description}.</p>
+                         <p className='text-md md:text-xl text-slate-700 text-justify'>{description}.</p>
                          <div className=" card-actions flex justify-evenly  mt-5">
                               <div>
                                    <p className='text-center font-bold text-xl'> Rating: {rating} <small><FaStar className=' inline-block w-4 mb-2 text-yellow-600' ></FaStar></small>  </p>
@@ -73,19 +85,16 @@ const ServiceDetails = () => {
                                    <p className='text-center font-bold text-xl'>Service Price: {price} </p>
                               </div>
                          </div>
-
-
                     </div>
                </section>
 
-
-
+               {/* Review form   */}
                <section>
                     {
                          user?.uid ?
                               <>
                                    <div className='mt-10 mb-10'>
-                                        <div className="w-82 m-auto md:w-8/12 lg:w-6/12  bg-white   rounded-lg ">
+                                        <div className=" w-72 m-auto md:w-8/12 lg:w-6/12  bg-white   rounded-lg ">
                                              <h3 className="pt-4 text-3xl font-bold text-center">Add Your Review!</h3>
                                              <form onSubmit={handleSubmit} className="px-8 ml-0 pt-6 pb-8 mb-4  bg-white rounded">
                                                   <div className="mb-4  md:flex md:justify-evenly">
@@ -103,9 +112,7 @@ const ServiceDetails = () => {
                                                                  required
                                                             />
                                                        </div>
-
                                                   </div>
-
                                                   <div className="mb-4  md:flex md:justify-center">
                                                        <div className="mb-4 md:mr-2 md:mb-0">
                                                             <label className="block mb-2 text-sm font-bold text-gray-700" for="Service Name">
@@ -120,7 +127,6 @@ const ServiceDetails = () => {
                                                                  required
                                                             />
                                                        </div>
-
                                                   </div>
                                                   <div className="mb-6 text-center">
                                                        <button
@@ -143,14 +149,20 @@ const ServiceDetails = () => {
 
                     }
                </section>
-               <section className=''>
-                    {
-                         reviews.map(review => <ReviewCard
-                              key={review._id}
-                              review={review}
-                         ></ReviewCard>)
-                    }
 
+               {/* service Review  */}
+               <section className=''>
+               <h2 className='text-3xl font-bold text-center m-10 '> Service Review</h2>
+                    {
+                         reviews.length ?
+                              reviews.map(review => <ReviewCard
+                                   key={review._id}
+                                   review={review}
+                              ></ReviewCard>)
+                              
+                              :
+                              <h2 className='text-3xl font-bold text-center m-10 '>Review Not Yet....... !</h2>
+                    }
                </section>
           </div>
      );

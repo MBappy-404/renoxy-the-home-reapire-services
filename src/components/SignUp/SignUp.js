@@ -5,9 +5,11 @@ import { AuthContext } from '../../Auth/AuthProvider';
 import { GoogleAuthProvider } from "firebase/auth";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import useTitle from '../../Hooks/useTitle';
 
 const SignUp = () => {
-
+      
+     useTitle('Sign up')
      const {createUser,googleLogin,userProfile} = useContext(AuthContext);
      const [error, setError] = useState();
      const googleProvider = new GoogleAuthProvider()

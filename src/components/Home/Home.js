@@ -17,41 +17,30 @@ const Home = () => {
                {/* Slider  */}
 
                < section slide className="carousel w-full container m-auto">
-
                     {/* slider1  */}
-
                     <div id="slide1" className="carousel-item relative   w-full">
                          <div className='carousel-img'>
-                              <img src={slider1} alt="" className="w-full" />
+                              <img src={slider1} alt="slider" className="w-full" />
                          </div>
-
-
                          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                               <a href="#slide3" className="btn btn-circle">❮</a>
                               <a href="#slide2" className="btn btn-circle">❯</a>
                          </div>
                     </div>
-
                     {/* slider2 */}
-
                     <div id="slide2" className="carousel-item relative w-full">
-
                          <div className='carousel-img'>
-                              <img src={slider2} alt="" className="w-full" />
+                              <img src={slider2} alt="slider" className="w-full" />
                          </div>
-
                          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                               <a href="#slide1" className="btn btn-circle">❮</a>
                               <a href="#slide3" className="btn btn-circle">❯</a>
                          </div>
                     </div>
-
                     {/* slider3 */}
-
                     <div id="slide3" className="carousel-item relative w-full">
-
                          <div className='carousel-img'>
-                              <img src={slider3} alt="" className="w-full" />
+                              <img src={slider3} alt="slider" className="w-full" />
                          </div>
                          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                               <a href="#slide2" className="btn btn-circle">❮</a>

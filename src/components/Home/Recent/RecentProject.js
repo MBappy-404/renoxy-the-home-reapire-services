@@ -5,8 +5,8 @@ const RecentProject = () => {
      return (
           <div>
                <div className='text-center'>
-                    <h1 className='text-4xl  font-bold'>RECENT PROJECTS</h1>
-                    <p className=' text-slate-700 text-lg mt-5 '>Here are a few of many projects we have completed for our customers. We provide a professional service <br />
+                    <h1 className='text-4xl  font-bold'>OUR RECENT PROJECTS</h1>
+                    <p className=' text-slate-700 text-lg mt-5 px-3 text-center '>Here are a few of many projects we have completed for our customers. We provide a professional service <br />
                          which includes consultation, free estimate, design, supply of materials and installation.</p>
                </div>
 

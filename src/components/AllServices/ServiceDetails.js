@@ -96,7 +96,7 @@ const ServiceDetails = () => {
                          user?.uid ?
                               <>
                                    <div className='mt-10 mb-10'>
-                                        <div className=" w-72 m-auto md:w-8/12 lg:w-6/12  bg-white   rounded-lg ">
+                                        <div className=" w-72 m-auto md:w-8/12 lg:w-6/12  bg-white  ">
                                              <h3 className="pt-4 text-3xl font-bold text-center">Add Your Review!</h3>
                                              <form onSubmit={handleSubmit} className="px-8 ml-0 pt-6 pb-8 mb-4  bg-white rounded">
                                                   <div className="mb-4  md:flex md:justify-evenly">
@@ -144,8 +144,8 @@ const ServiceDetails = () => {
                               </>
                               :
                               <>
-                                   <div className='m-auto'>
-                                        <Link to='/login' >  <button className='w-full  btn mt-10 mb-10 btn-primary'>Please Log in to add Your review</button></Link>
+                                   <div className='flex justify-center'>
+                                        <Link to='/login' >  <button className='w-full md:w-96 btn mt-10 mb-10 btn-primary'>Please Log in to add Your review</button></Link>
                                    </div>
                               </>
 
@@ -154,17 +154,19 @@ const ServiceDetails = () => {
 
                {/* service Review  */}
                <section className=''>
-               <h2 className='text-3xl font-bold text-center m-10 '> Service Review</h2>
-                    {
-                         reviews.length ?
-                              reviews.map(review => <ReviewCard
-                                   key={review._id}
-                                   review={review}
-                              ></ReviewCard>)
-                              
-                              :
-                              <h2 className='text-3xl font-bold text-center m-10 '>Review Not Yet....... !</h2>
-                    }
+                    <h2 className='text-3xl font-bold text-center m-10 '> Service Review</h2>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-3 md:px-0 '>
+                         {
+                              reviews.length ?
+                                   reviews.map(review => <ReviewCard
+                                        key={review._id}
+                                        review={review}
+                                   ></ReviewCard>)
+
+                                   :
+                                   <h2 className='text-3xl font-bold text-center m-10 '>Review Not Yet....... !</h2>
+                         }
+                    </div>
                </section>
           </div>
      );

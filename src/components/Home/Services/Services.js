@@ -7,16 +7,16 @@ const Services = ({ service }) => {
 
   return (
     <div className='mb-8'>
-      <div className="card w-72   h-full m-auto md:w-96 bg-base-100 mb-5 hover:shadow-2xl  transition  shadow-2xl hover:shadow-slate-600">
-        <figure className="px-10 pt-10">
-          <img src={logo} alt="imag" className="rounded-xl w-full" />
-        </figure>
-        <div className="card-body items-center text-center">
-          <h2 className="card-title font-bold text-2xl">{name}</h2>
-          <p className=' text-slate-500 '>{description.slice(0, 100)}......</p>
-          <div className="card-actions">
-            <p className='text-xl font-semibold text-green-800'>Price: {price}</p>
+      <div class="bg-gray-900 shadow-lg transform hover:scale-105 transition duration-500 rounded p-3">
+        <div class="group relative">
+          <img class="w-full block rounded" src={logo} alt=" " />
+          <div class="absolute bg-black rounded bg-opacity-0 group-hover:bg-opacity-60 w-full h-full top-0 flex items-center group-hover:opacity-100 transition justify-evenly">
+            <button class=" text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition px-8">{description.slice(0,200) }...</button>
           </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-white text-lg mb-2">{name}</h3>
+          <p class="text-gray-400"> Service Fee: {price}</p>
         </div>
       </div>
     </div>

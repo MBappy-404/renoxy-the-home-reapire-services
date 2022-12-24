@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ShowAllService from './ShowAllService';
-import serviceImg from '../../Assets/Images/Black And Yellow Modern We Build Your Dream Home Facebook Cover .gif'
 import useTitle from '../../Hooks/useTitle';
 
 const AllServices = () => {
@@ -11,11 +10,9 @@ const AllServices = () => {
      return (
           <div>
                <div>
-                 <img src={serviceImg} className='container m-auto w-full'  alt="" />
-               </div>
-               <div>
+                    <h1 className='text-4xl ml-3 md:ml-10 mt-3 font-bold'>Total Services- {services.length}</h1>
                   
-                    <div className='container   m-auto gap-10 md:gap-14 mt-10 mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
+                    <div className='container   m-auto gap-5 px-5 mt-10 mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
                          {
                               services.map(service => <ShowAllService
                                    key={service._id}

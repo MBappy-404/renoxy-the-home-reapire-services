@@ -16,7 +16,6 @@ const ReviewCard = ({ review }) => {
                          }
                          </div>
                          <div>
-                              <h2 class="text-gray-800 text-3xl font-semibold">{review.serviceName}</h2>
                               <p class="mt-2 text-gray-600 italic">{review.message}</p> <br />
                               <p>Rating: {review.rating} <small><FaStar className=' inline-block w-4 mb-2 text-yellow-600 mt-1'></FaStar></small> </p>
                          </div>

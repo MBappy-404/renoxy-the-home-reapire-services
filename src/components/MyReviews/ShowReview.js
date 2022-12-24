@@ -1,9 +1,14 @@
 import React from 'react';
+import { useState } from 'react';
 import { FaEdit } from "react-icons/fa";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 
 const ShowReview = ({ review, handleDelete }) => {
      const { serviceName, rating, message, _id } = review;
+      const MySwal = withReactContent(Swal);
+    
 
      const handleUpdate = event => {
           event.preventDefault()
@@ -28,7 +33,13 @@ const ShowReview = ({ review, handleDelete }) => {
           })
                .then(res => res.json())
                .then(data => {
-                    console.log(data);
+                    // console.log(data);
+                    MySwal.fire({
+                         title: 'Update Success',
+                         text: '',
+                         icon: 'success',
+                         confirmButtonText: 'Ok'
+                    });
                })
      }
      return (
@@ -49,12 +60,13 @@ const ShowReview = ({ review, handleDelete }) => {
                <td>{rating}</td>
                <th className='flex justify-evenly'>
 
-                    <label htmlFor="my-modal-6" className="btn"> <FaEdit></FaEdit></label>
+                    <label htmlFor={`modal${_id}`} className="btn"> <FaEdit></FaEdit></label>
 
                     {/* Put this part before </body> tag */}
-                    <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+                    <input type="checkbox" id={`modal${_id}`} className="modal-toggle" />
                     <div className="modal sm:modal-middle">
                          <div className="modal-box">
+                         <label htmlFor={`modal${_id}`} className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                               <form onSubmit={handleUpdate}>
                                    <h3 className="font-bold text-lg">Update Your Review!</h3>
                                    <p>Service: {serviceName}</p> <br />
@@ -65,8 +77,7 @@ const ShowReview = ({ review, handleDelete }) => {
                                   
                                   {/* update or cancel  */}
                                    <div className="modal-action">
-                                        <input htmlFor="my-modal-6" className="btn" type="submit" value='Update' />
-                                        <label htmlFor="my-modal-6" className="btn">Not Now!</label>
+                                        <input htmlFor={`modal${_id}`}   className="btn" type="submit" value='Update' />                  
                                    </div>
                               </form>
                          </div>

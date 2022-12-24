@@ -54,11 +54,11 @@ const MyReviews = () => {
 
      }
      return (
-          <div>
+          <div className='mb-48'>
                <div>
-                    <h1 className='text-2xl font-bold mt-5 mb-5 text-center '>My Review: {reviews.length}</h1>
+                    <h1 className='text-2xl font-bold mt-5 mb-5 text-center '>My Reviews: {reviews.length}</h1>
                </div>
-               <div className="overflow-x-auto w-full">
+               <div className="overflow-x-auto w-full px-0 md:px-5">
                     <table className="table w-full">
 
                          <thead>

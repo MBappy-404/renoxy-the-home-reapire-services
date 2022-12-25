@@ -5,7 +5,7 @@ const ReviewCard = ({ review }) => {
      return (
           
                <div className='flex justify-center '>
-                    <div class=" w-80 py-4 px-8  bg-white shadow-lg  rounded-lg my-10">
+                    <div class=" w-full md:w-96 py-4 px-8  bg-white shadow-lg  rounded-lg my-10">
                          <div class="flex justify-center md:justify-end -mt-16">
                               {
                               review?.userPhoto ?

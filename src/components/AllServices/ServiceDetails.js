@@ -72,7 +72,7 @@ const ServiceDetails = () => {
           <div className='container m-auto'>
 
                {/* service details  */}
-               <section className=''>
+               {/* <section className=''>
                     <figure className="px-10  pt-4">
                          <img src={logo} alt="service-img" className="w-full  details-img   m-auto" />
                     </figure>
@@ -88,7 +88,25 @@ const ServiceDetails = () => {
                               </div>
                          </div>
                     </div>
-               </section>
+               </section> */}
+               <div>
+                    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 p-5 md:p-10 gap-0 rounded overflow-hidden shadow-lg m-6">
+                         <div class="md:flex-shrink-0">
+                              <img class="rounded-lg md:w-full lg:w-[550px]" src={logo} alt="img"/>
+                         </div>
+                         <div class="mt-4 md:mt-2 md:ml-5">
+                              <div class="uppercase tracking-wide text-2xl text-indigo-600 font-bold"><i class="fas fa-bullhorn mr-2"></i>{name}</div>
+                             
+
+                              <p class="mt-2 text-gray-600">{description}.</p>
+                              <div class="">
+                                   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><p className='text-center fon-semibold text-lg'> Rating: {rating} <small><FaStar className=' inline-block w-4 mb-2 text-yellow-600' ></FaStar></small>  </p></span>
+                                   <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"> <p className='text-center font-semibold text-lg'>Service Price: {price} </p></span>
+                                   
+                              </div>
+                         </div>
+                    </div>
+               </div>
 
                {/* Review form   */}
                <section>
@@ -154,8 +172,8 @@ const ServiceDetails = () => {
 
                {/* service Review  */}
                <section className=''>
-                    <h2 className='text-3xl font-bold text-center m-10 '> Service Review</h2>
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-3 md:px-0 '>
+                    <h2 className='text-3xl font-bold text-center mb-10 '> Service Review</h2>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-x-5 lg:grid-cols-3 px-3 md:px-0 '>
                          {
                               reviews.length ?
                                    reviews.map(review => <ReviewCard
